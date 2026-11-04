@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" aria-label="LANGZI" role="img">
+  <rect width="200" height="50" rx="6" fill="#1a1a1a"/>
+  <text x="100" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="28" letter-spacing="4" fill="#fff">LANGZI</text>
+  <rect x="18" y="36" width="28" height="6" rx="3" fill="#8a1c2b"/>
+  <rect x="50" y="36" width="28" height="6" rx="3" fill="#2f5d3a"/>
+  <rect x="82" y="36" width="28" height="6" rx="3" fill="#1f3a5f"/>
+</svg>
