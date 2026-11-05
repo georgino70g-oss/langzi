@@ -77,6 +77,8 @@ export const en: Record<TranslationKey, string> = {
   'contact.hours': 'Opening hours',
   'contact.notConfigured': 'Contact details will be added soon. In the meantime you can submit your order through the form and we will contact you.',
   'contact.orderCta': 'Go to products',
+  'contact.payTitle': 'Payment details',
+  'contact.payIntro': 'Payment is made after the shop confirms your order. Please put your full name in the payment reference.',
 
   'footer.tagline': "Men's casual plaid shirts.",
   'footer.shop': 'Shop',

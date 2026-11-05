@@ -9,6 +9,8 @@ export default function Contact() {
   const { lang, t } = useI18n();
   useSeo({ title: t('contact.title'), description: t('seo.contact.desc'), path: '/contact', lang });
   const b = siteConfig.business;
+  const pay = siteConfig.payment;
+  const hasPay = Boolean(pay.iban || pay.irisId);
   const hasAny = Boolean(b.phone || b.email || b.address || b.openingHours.el);
 
   return (
@@ -48,6 +50,44 @@ export default function Contact() {
               </div>
             )}
           </dl>
+          {hasPay && (
+            <section aria-labelledby="contact-pay">
+              <h2 id="contact-pay">{t('contact.payTitle')}</h2>
+              <p>{t('contact.payIntro')}</p>
+              <dl className="contact">
+                {pay.bankName && (
+                  <div>
+                    <dt>{t('confirm.bank')}</dt>
+                    <dd>{pay.bankName}</dd>
+                  </div>
+                )}
+                {pay.accountHolder && (
+                  <div>
+                    <dt>{t('confirm.holder')}</dt>
+                    <dd>{pay.accountHolder}</dd>
+                  </div>
+                )}
+                {pay.iban && (
+                  <div>
+                    <dt>IBAN</dt>
+                    <dd>{pay.iban}</dd>
+                  </div>
+                )}
+                {pay.bic && (
+                  <div>
+                    <dt>BIC/SWIFT</dt>
+                    <dd>{pay.bic}</dd>
+                  </div>
+                )}
+                {pay.irisId && (
+                  <div>
+                    <dt>{t('confirm.irisId')}</dt>
+                    <dd>{pay.irisId}</dd>
+                  </div>
+                )}
+              </dl>
+            </section>
+          )}
         </>
       ) : (
         <p className="notice">{t('contact.notConfigured')}</p>

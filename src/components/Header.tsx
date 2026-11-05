@@ -34,16 +34,6 @@ export default function Header() {
     <>
       <div className="announce">
         <p>{t('announce.text', { p1: BUNDLE_PRICES[1], p2: BUNDLE_PRICES[2], p3: BUNDLE_PRICES[3] })}</p>
-        {phone && (
-          <p className="announce__phone">
-            <Phone size={14} aria-hidden="true" />
-            <a href={`tel:+30${phone.replace(/\D/g, '').replace(/^30/, '')}`} aria-label={t('announce.phoneLabel', { phone })}>
-              {phone}
-            </a>
-            <span aria-hidden="true"> · </span>
-            <span>{siteConfig.business.openingHoursShort[lang]}</span>
-          </p>
-        )}
       </div>
       <header className="header">
         <div className="container header__inner">
@@ -60,6 +50,19 @@ export default function Header() {
             </ul>
           </nav>
           <div className="header__tools">
+            {phone && (
+              <a
+                className="phonelink"
+                href={`tel:+30${phone.replace(/\D/g, '').replace(/^30/, '')}`}
+                aria-label={t('announce.phoneLabel', { phone })}
+              >
+                <Phone size={20} aria-hidden="true" />
+                <span className="phonelink__text" aria-hidden="true">
+                  <strong>{phone}</strong>
+                  <small>{siteConfig.business.openingHoursShort[lang]}</small>
+                </span>
+              </a>
+            )}
             <div className="lang" role="group" aria-label={t('nav.language')}>
               {(['el', 'en'] as const).map((l) => (
                 <button
