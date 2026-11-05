@@ -4,8 +4,8 @@ import type { Lang } from './types';
  * EDITABLE TEMPLATES for the legal / policy pages.
  *
  * !!! These are NOT finished legal documents and do NOT by themselves make the shop
- * compliant with Greek or EU law. Text in [square brackets] must be completed by the
- * owner. Have the final texts checked against the current Greek and EU consumer
+ * compliant with Greek or EU law.
+ * Have the final texts checked against the current Greek and EU consumer
  * protection, distance-selling, privacy (GDPR) and e-commerce requirements
  * (ideally by a lawyer or accountant) before launch. !!!
  */
@@ -22,8 +22,6 @@ export interface LegalDoc {
   sections: LegalSection[];
 }
 
-const noteEl = 'ΠΡΟΣΟΧΗ ΙΔΙΟΚΤΗΤΗ: πρότυπο κείμενο. Συμπληρώστε τα στοιχεία σε [αγκύλες] και ελέγξτε το κείμενο πριν την έναρξη λειτουργίας.';
-const noteEn = 'OWNER NOTICE: template text. Complete the details in [square brackets] and have the text reviewed before launch.';
 
 export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
   el: {
@@ -62,16 +60,9 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
           ],
         },
         {
-          h: 'Πώς ασκείται',
+          h: 'Πώς ασκείται η υπαναχώρηση',
           p: [
-            'Επικοινωνήστε μαζί μας με σαφή δήλωση ότι επιθυμείτε να υπαναχωρήσετε. [Συμπληρώστε τα στοιχεία επικοινωνίας και τη διεύθυνση επιστροφής.]',
-            'Τα προϊόντα πρέπει να επιστρέφονται σε κατάσταση που επιτρέπει την επαναπώληση, όπως ορίζει η νομοθεσία. [Συμπληρώστε ποιος επιβαρύνεται το κόστος επιστροφής.]',
-          ],
-        },
-        {
-          h: 'Ακύρωση παραγγελίας',
-          p: [
-            'Επικοινωνήστε μαζί μας με σαφή δήλωση ότι επιθυμείτε να υπαναχωρήσετε μέσω email στο [taniskidis.g@gmail.com] ή τηλεφωνικά στο [2310328128]. Η επιστροφή των προϊόντων γίνεται στη διεύθυνση , Μαρασλή 75, Τ.Κ. 54249, Θεσσαλονίκη, είτε με ταχυμεταφορική (courier) της επιλογής σας είτε εύκολα μέσω BOX NOW.',
+            'Επικοινωνήστε μαζί μας με σαφή δήλωση ότι επιθυμείτε να υπαναχωρήσετε, μέσω email στο taniskidis.g@gmail.com ή τηλεφωνικά στο 2310328128. Η επιστροφή των προϊόντων γίνεται στη διεύθυνση Μαρασλή 75, Τ.Κ. 54249, Θεσσαλονίκη, είτε με ταχυμεταφορική (courier) της επιλογής σας είτε εύκολα μέσω BOX NOW.',
             'Τα προϊόντα πρέπει να επιστρέφονται σε κατάσταση που επιτρέπει την επαναπώληση, όπως ορίζει η νομοθεσία (αφόρετα, με τις ετικέτες και την αρχική συσκευασία τους). Το κόστος της μεταφορικής για την επιστροφή επιβαρύνει τον πελάτη.',
           ],
         },
@@ -79,8 +70,7 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
           h: 'Επιστροφή χρημάτων',
           p: [
             'Σε περίπτωση άσκησης του δικαιώματος υπαναχώρησης, η επιστροφή των χρημάτων σας θα ολοκληρωθεί εντός 14 ημερολογιακών ημερών από την ημερομηνία που θα παραλάβουμε τα επιστρεφόμενα προϊόντα και θα επιβεβαιώσουμε ότι βρίσκονται στην αρχική τους άριστη κατάσταση.',
-            'Decathlon',
-            'Η επιστροφή εκτελείται με το ίδιο μέσο πληρωμής που χρησιμοποιήσατε για την αρχική σας αγορά (επιστροφή στην κάρτα ή κατάθεση σε τραπεζικό λογαριασμό IBAN σε περίπτωση αντικαταβολής), αφαιρουμένων των εξόδων επιστροφής.',
+            'Η επιστροφή εκτελείται με το ίδιο μέσο πληρωμής που χρησιμοποιήσατε για την αρχική σας αγορά, δηλαδή με κατάθεση στον τραπεζικό λογαριασμό (IBAN) ή μέσω IRIS που θα μας υποδείξετε.',
           ],
         },
       ],
@@ -89,6 +79,10 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
       title: 'Πολιτική απορρήτου',
       intro: '',
       sections: [
+        {
+          h: 'Υπεύθυνος επεξεργασίας',
+          p: ['Υπεύθυνος επεξεργασίας των δεδομένων σας είναι η LANGZI, ΑΦΜ 016472415, ΔΟΥ Αμπελοκήπων, ΓΕΜΗ 168002104000, Μαρασλή 75, Τ.Κ. 54249, Θεσσαλονίκη, email: taniskidis.g@gmail.com, τηλ.: 2310328128.'],
+        },
         {
           h: 'Ποια δεδομένα συλλέγουμε',
           p: [
@@ -148,9 +142,9 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
           h: 'Εφαρμοστέο Δίκαιο και Επίλυση Διαφορών',
           p: [
             'Εφαρμοστέο Δίκαιο: Οι παρόντες Όροι και Προϋποθέσεις Χρήσης, καθώς και κάθε τροποποίησή τους, διέπονται και συμπληρώνονται από το Ελληνικό Δίκαιο, το Δίκαιο της Ευρωπαϊκής Ένωσης και τις σχετικές διεθνείς συνθήκες.',
-            'Φιλικός Διακανονισμός: Στόχος μας είναι η άμεση και ικανοποιητική επίλυση οποιουδήποτε αιτήματος ή παράπονου προκύψει. Σε περίπτωση που ανακύψει οποιαδήποτε διαφορά, ενθαρρύνεται ο χρήστης/καταναλωτής να επικοινωνήσει πρώτα μαζί μας μέσω ηλεκτρονικού ταχυδρομείου στο [taniskidis.g@gmail.com] ή τηλεφωνικά στο [2310328128], προκειμένου να αναζητηθεί μια φιλική διευθέτηση του ζητήματος.',
-            'Εναλλακτική Επίλυση Διαφορών (ΕΕΔ - Ηλεκτρονική Επίλυση Διαφορών): Σύμφωνα με την Οδηγία 2013/11/ΕΚ και τον Κανονισμό (ΕΕ) αριθ. 524/2013, προβλέπεται η δυνατότητα ηλεκτρονικής επίλυσης καταναλωτικών διαφορών με τη διαδικασία Εναλλακτικής Επίλυσης Διαφορών (Alternative Dispute Resolution - ADR) σε όλη την Ευρωπαϊκή Ένωση. Εάν είστε καταναλωτής και αντιμετωπίζετε πρόβλημα με αγορά που πραγματοποιήσατε από την ιστοσελίδα μας, μπορείτε να χρησιμοποιήσετε την πλατφόρμα Ηλεκτρονικής Επίλυσης Διαφορών (ΗΕΔ) της Ευρωπαϊκής Επιτροπής, η οποία είναι διαθέσιμη στη διεύθυνση: https://ec.europa.eu/consumers/odr. Επίσης, μπορείτε να απευθυνθείτε στην Ανεξάρτητη Αρχή «Συνήγορος του Καταναλωτή» (http://www.synigoroskatanaloti.gr).',
-            'Δωσιδικία (Αρμόδια Δικαστήρια): Σε περίπτωση που δεν καταστεί δυνατή η φιλική επίλυση της διαφοράς, αποκλειστικά αρμόδια για την επίλυση οποιασδήποτε διαφοράς προκύψει από ή σε σχέση με τη χρήση της παρούσας ιστοσελίδας ή την πώληση προϊόντων/υπηρεσιών μέσω αυτής ορίζονται τα καθ\' ύλην αρμόδια Δικαστήρια [Θεσσαλονίκης].',
+            'Φιλικός Διακανονισμός: Στόχος μας είναι η άμεση και ικανοποιητική επίλυση οποιουδήποτε αιτήματος ή παράπονου προκύψει. Σε περίπτωση που ανακύψει οποιαδήποτε διαφορά, ενθαρρύνεται ο χρήστης/καταναλωτής να επικοινωνήσει πρώτα μαζί μας μέσω ηλεκτρονικού ταχυδρομείου στο taniskidis.g@gmail.com ή τηλεφωνικά στο 2310328128, προκειμένου να αναζητηθεί μια φιλική διευθέτηση του ζητήματος.',
+            'Εναλλακτική Επίλυση Διαφορών (ΕΕΔ): Ως καταναλωτής μπορείτε να προσφύγετε σε φορείς εναλλακτικής επίλυσης καταναλωτικών διαφορών σύμφωνα με την Οδηγία 2013/11/ΕΕ, όπως ο Συνήγορος του Καταναλωτή (https://www.synigoroskatanaloti.gr).',
+            'Δωσιδικία (Αρμόδια Δικαστήρια): Σε περίπτωση που δεν καταστεί δυνατή η φιλική επίλυση της διαφοράς, αποκλειστικά αρμόδια για την επίλυση οποιασδήποτε διαφοράς προκύψει από ή σε σχέση με τη χρήση της παρούσας ιστοσελίδας ή την πώληση προϊόντων/υπηρεσιών μέσω αυτής ορίζονται τα καθ\' ύλην αρμόδια Δικαστήρια Θεσσαλονίκης.',
           ],
         },
       ],
@@ -192,16 +186,9 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
           ],
         },
         {
-          h: 'How to exercise it',
+          h: 'How to exercise the right of withdrawal',
           p: [
-            'Contact us with a clear statement that you wish to withdraw. [Add contact details and returns address.]',
-            'Goods must be returned in a condition permitted by law. [State who bears the return shipping cost.]',
-          ],
-        },
-        {
-          h: 'Cancelling an order',
-          p: [
-            'Contact us with a clear statement that you wish to withdraw via email at [taniskidis.g@gmail.com] or by phone at [2310328128]. The products are returned to the address: Marasli 75, PC 54249, Thessaloniki, either by courier of your choice or easily via BOX NOW.',
+            'Contact us with a clear statement that you wish to withdraw, via email at taniskidis.g@gmail.com or by phone at 2310328128. The products are returned to the address: Marasli 75, PC 54249, Thessaloniki, either by courier of your choice or easily via BOX NOW.',
             'The products must be returned in a condition that permits resale, as required by law (unworn, with labels and original packaging). The shipping cost for the return is borne by the customer.',
           ],
         },
@@ -209,8 +196,7 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
           h: 'Refunds',
           p: [
             'In the event that the right of withdrawal is exercised, your refund will be completed within 14 calendar days from the date we receive the returned goods and confirm they are in their original perfect condition.',
-            'Decathlon',
-            'The refund is made using the same payment method used for your original purchase (refund to card or deposit to IBAN bank account in case of cash on delivery), less return shipping costs.',
+            'The refund is made using the same payment method used for your original purchase, that is, by deposit to the bank account (IBAN) or via IRIS that you indicate to us.',
           ],
         },
       ],
@@ -219,6 +205,10 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
       title: 'Privacy policy',
       intro: '',
       sections: [
+        {
+          h: 'Data controller',
+          p: ['The controller of your personal data is LANGZI, VAT no. 016472415, Tax Office: Ampelokipoi, GEMI no. 168002104000, Marasli 75, PC 54249, Thessaloniki, email: taniskidis.g@gmail.com, tel.: 2310328128.'],
+        },
         {
           h: 'What data we collect',
           p: [
@@ -278,9 +268,9 @@ export const legal: Record<Lang, Record<LegalKey, LegalDoc>> = {
           h: 'Governing Law and Dispute Resolution',
           p: [
             'Governing Law: These Terms and Conditions of Use and any amendments hereto are governed by and supplemented by Greek Law, European Union Law and relevant international treaties.',
-            'Friendly Settlement: Our goal is the immediate and satisfactory resolution of any request or complaint that may arise. Should any dispute arise, the user/consumer is encouraged to contact us first via email at [taniskidis.g@gmail.com] or by phone at [2310328128], in order to seek an amicable resolution of the matter.',
-            'Alternative Dispute Resolution (ADR - Online Dispute Resolution): In accordance with Directive 2013/11/EU and Regulation (EU) No 524/2013, the possibility of online dispute resolution through the Alternative Dispute Resolution (ADR) procedure is provided throughout the European Union. If you are a consumer and have a problem with a purchase made through our website, you may use the European Commission\'s Online Dispute Resolution (ODR) platform, which is available at: https://ec.europa.eu/consumers/odr. You may also contact the Independent Authority "Consumer Ombudsman" (http://www.synigoroskatanaloti.gr).',
-            'Jurisdiction (Competent Courts): Should amicable resolution of the dispute prove impossible, the exclusively competent courts for resolving any dispute arising from or in connection with the use of this website or the sale of products/services through it shall be the competent courts of [Thessaloniki].',
+            'Friendly Settlement: Our goal is the immediate and satisfactory resolution of any request or complaint that may arise. Should any dispute arise, the user/consumer is encouraged to contact us first via email at taniskidis.g@gmail.com or by phone at 2310328128, in order to seek an amicable resolution of the matter.',
+            'Alternative Dispute Resolution (ADR): As a consumer you may turn to bodies for the out-of-court resolution of consumer disputes under Directive 2013/11/EU, such as the Consumer Ombudsman (https://www.synigoroskatanaloti.gr).',
+            'Jurisdiction (Competent Courts): Should amicable resolution of the dispute prove impossible, the exclusively competent courts for resolving any dispute arising from or in connection with the use of this website or the sale of products/services through it shall be the competent courts of Thessaloniki.',
           ],
         },
       ],

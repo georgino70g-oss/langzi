@@ -7,6 +7,10 @@ import { cleanup, render, screen, waitFor, within } from '@testing-library/react
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 import { products } from '../data/products';
+import { siteConfig } from '../data/siteConfig';
+
+// Use a fixed fixture catalog so the tests do not break when the shop edits its real products.
+vi.mock('../data/products', async () => await import('./fixtureProducts'));
 
 const goto = (path: string) => window.history.pushState({}, '', path);
 const cartKey = 'langzi-cart-v1';
@@ -37,7 +41,8 @@ describe('catalog and sizes', () => {
     const active = products.filter((p) => p.active).length;
     expect(screen.getAllByRole('article')).toHaveLength(active);
     expect(screen.queryByText(/ανενεργό δείγμα/)).toBeNull();
-    expect(document.querySelectorAll('img').length).toBe(0);
+    // No <img> for products (the only <img> is the logo in the header and footer).
+    expect(document.querySelectorAll('main img').length).toBe(0);
     expect(screen.getAllByRole('img', { name: /Η φωτογραφία θα προστεθεί σύντομα/ }).length).toBe(active);
   });
 
@@ -106,9 +111,10 @@ describe('language', () => {
   it('switches to English and remembers the choice', async () => {
     const user = userEvent.setup();
     render(<App />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Καρό πουκάμισα για κάθε μέρα');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/\S/);
+    expect(screen.getAllByRole('link', { name: 'Προϊόντα' }).length).toBeGreaterThan(0);
     await user.click(screen.getByRole('button', { name: 'EN' }));
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Plaid shirts for every day');
+    expect(screen.getAllByRole('link', { name: 'Products' }).length).toBeGreaterThan(0);
     expect(window.localStorage.getItem('langzi-lang')).toBe('en');
     expect(document.documentElement.lang).toBe('en');
   });
@@ -268,8 +274,10 @@ describe('pickup and payment methods', () => {
 
     await waitFor(() => expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Η παραγγελία σας υποβλήθηκε'));
     expect(screen.getByText(/παραλαβή από το κατάστημα\./)).toBeInTheDocument();
-    // IRIS details are not configured yet: nothing is invented, the customer is told they will be sent.
+    // The IRIS section is shown; its details come from siteConfig (or a "details will be sent" note if empty).
     expect(screen.getByRole('heading', { name: 'Πληρωμή — IRIS' })).toBeInTheDocument();
-    expect(screen.getByText(/Τα στοιχεία πληρωμής θα σας σταλούν/)).toBeInTheDocument();
+    const irisConfigured = Boolean(siteConfig.payment.irisId);
+    if (irisConfigured) expect(screen.getByText(siteConfig.payment.irisId)).toBeInTheDocument();
+    else expect(screen.getByText(/Τα στοιχεία πληρωμής θα σας σταλούν/)).toBeInTheDocument();
   });
 });

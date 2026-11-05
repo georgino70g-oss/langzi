@@ -29,7 +29,7 @@ export const siteConfig = {
     vatNumber: '016472415', // ΑΦΜ 016472415
     taxOffice: 'ΔΟΥ ΑΜΠΕΛΟΚΗΠΩΝ', // ΔΟΥ ΑΜΠΕΛΟΚΗΠΩΝ
     gemiNumber: '168002104000', // ΓΕΜΗ (if applicable)
-    address: 'ΜΑΡΑΣΛΗ 75 TK 54249 ΘΕΣΣΑΛΟΝΙΚΗ ', // store address (also shown as the pickup address when filled in)
+    address: 'ΜΑΡΑΣΛΗ 75, Τ.Κ. 54249, ΘΕΣΣΑΛΟΝΙΚΗ', // store address (also shown as the pickup address when filled in)
     returnAddress: '', // address for returns
     phone: '2310328128', // shown in the top bar and on the contact page
     email: 'taniskidis.g@gmail.com', // public contact email

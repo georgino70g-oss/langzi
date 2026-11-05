@@ -7,13 +7,13 @@ import Breadcrumbs from '../components/Breadcrumbs';
 export default function LegalPage({ docKey, path }: { docKey: LegalKey; path: string }) {
   const { lang } = useI18n();
   const doc = legal[lang][docKey];
-  useSeo({ title: doc.title, description: doc.intro, path, lang });
+  useSeo({ title: doc.title, description: doc.intro || doc.title, path, lang });
 
   return (
     <div className="container page narrow legal">
       <Breadcrumbs items={[{ label: doc.title }]} />
       <h1>{doc.title}</h1>
-      <p className="notice">{doc.intro}</p>
+      {doc.intro && <p className="notice">{doc.intro}</p>}
       {doc.sections.map((s) => (
         <section key={s.h}>
           <h2>{s.h}</h2>
