@@ -7,6 +7,9 @@
 export const siteConfig = {
   brandName: 'LANGZI',
 
+  /** Link to your main store (opens in a new tab). Leave url empty ('') to hide it everywhere. */
+  externalShop: { url: 'https://www.arezzocamiceria.com/', name: 'Arezzo Camiceria' },
+
   /**
    * Production URL WITHOUT trailing slash, e.g. 'https://langzi.netlify.app'.
    * Needed for canonical links, hreflang, sitemap.xml and Open Graph URLs.

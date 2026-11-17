@@ -16,6 +16,7 @@ export default function Home() {
   const featured = all.filter((x) => x.featured).slice(0, 4);
   const shown = featured.length > 0 ? featured : all.slice(0, 4);
   const b = siteConfig.business;
+  const ext = siteConfig.externalShop;
   const hasContact = Boolean(b.phone || b.email || b.address);
 
   const offers = [
@@ -77,6 +78,20 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {ext.url && (
+        <section className="section" aria-labelledby="extshop-title">
+          <div className="container cta-row">
+            <div>
+              <h2 id="extshop-title">{t('extshop.title')}</h2>
+              <p>{t('extshop.text')}</p>
+            </div>
+            <a href={ext.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+              {t('extshop.btn')} <span className="sr-only">{t('extshop.newTab')}</span>
+            </a>
+          </div>
+        </section>
+      )}
 
       <section className="section" id="how" aria-labelledby="how-title">
         <div className="container two-col">

@@ -82,6 +82,11 @@ export const en: Record<TranslationKey, string> = {
 
   'footer.tagline': "Men's casual plaid shirts.",
   'footer.shop': 'Shop',
+  'extshop.title': 'Looking for more products?',
+  'extshop.text': 'Visit our store for the full collection.',
+  'extshop.btn': 'Visit our full store',
+  'extshop.newTab': '(opens in a new tab)',
+  'extshop.label': 'Store',
   'footer.info': 'Information',
   'footer.legal': 'Legal',
   'footer.privacy': 'Privacy policy',

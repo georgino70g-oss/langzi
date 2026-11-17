@@ -9,6 +9,7 @@ export default function Contact() {
   const { lang, t } = useI18n();
   useSeo({ title: t('contact.title'), description: t('seo.contact.desc'), path: '/contact', lang });
   const b = siteConfig.business;
+  const ext = siteConfig.externalShop;
   const pay = siteConfig.payment;
   const hasPay = Boolean(pay.iban || pay.irisId);
   const hasAny = Boolean(b.phone || b.email || b.address || b.openingHours.el);
@@ -41,6 +42,16 @@ export default function Contact() {
               <div>
                 <dt>{t('contact.address')}</dt>
                 <dd>{b.address}</dd>
+              </div>
+            )}
+            {ext.url && (
+              <div>
+                <dt>{t('extshop.label')}</dt>
+                <dd>
+                  <a href={ext.url} target="_blank" rel="noopener noreferrer">
+                    {ext.name} <span className="sr-only">{t('extshop.newTab')}</span>
+                  </a>
+                </dd>
               </div>
             )}
             {b.openingHours[lang] && (

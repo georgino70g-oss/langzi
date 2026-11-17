@@ -80,6 +80,11 @@ export const el = {
 
   'footer.tagline': 'Ανδρικά casual καρό πουκάμισα.',
   'footer.shop': 'Κατάστημα',
+  'extshop.title': 'Θέλετε να δείτε και άλλα προϊόντα;',
+  'extshop.text': 'Επισκεφθείτε το κατάστημά μας με όλη τη συλλογή.',
+  'extshop.btn': 'Δείτε όλο το κατάστημά μας',
+  'extshop.newTab': '(ανοίγει σε νέα καρτέλα)',
+  'extshop.label': 'Κατάστημα',
   'footer.info': 'Πληροφορίες',
   'footer.legal': 'Νομικά',
   'footer.privacy': 'Πολιτική απορρήτου',

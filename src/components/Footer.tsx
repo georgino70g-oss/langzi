@@ -6,6 +6,7 @@ import Logo from './Logo';
 export default function Footer() {
   const { t } = useI18n();
   const b = siteConfig.business;
+  const ext = siteConfig.externalShop;
   return (
     <footer className="footer">
       <div className="container footer__grid">
@@ -19,6 +20,13 @@ export default function Footer() {
             <li><Link to="/products">{t('nav.products')}</Link></li>
             <li><Link to="/cart">{t('nav.cart')}</Link></li>
             <li><Link to="/size-guide">{t('nav.sizeGuide')}</Link></li>
+            {ext.url && (
+              <li>
+                <a href={ext.url} target="_blank" rel="noopener noreferrer">
+                  {ext.name} <span className="sr-only">{t('extshop.newTab')}</span>
+                </a>
+              </li>
+            )}
           </ul>
         </div>
         <div>
