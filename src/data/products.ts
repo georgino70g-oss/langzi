@@ -60,6 +60,30 @@ export const products: Product[] = [
     description: { el: descEl, en: descEn },
     image: 'shirt-007.webp', images: ['shirt-007-front.webp', 'shirt-007-back.webp'],
     stock: { M: 1, L: 1, XL: 1, XXL: 1, '3XL': 1 },
+  },  {
+    id: 'shirt-008', sku: 'LZ-008', active: true, featured: false, accent: '#8a1c2b',
+    name: { el: 'Καρό Πουκάμισο Κόκκινο-Μπλε', en: 'Red-Blue Plaid Shirt' },
+    description: { el: descEl, en: descEn },
+    image: 'shirt-008.webp', images: ['shirt-008-front.webp', 'shirt-008-back.webp'],
+    stock: { M: 1, L: 1, XL: 1, XXL: 1, '3XL': 1 },
+  },  {
+    id: 'shirt-009', sku: 'LZ-009', active: true, featured: false, accent: '#8a1c2b',
+    name: { el: 'Καρό Πουκάμισο Μπλε-Καφέ', en: 'Blue-Brown Plaid Shirt' },
+    description: { el: descEl, en: descEn },
+    image: 'shirt-009.webp', images: ['shirt-009-front.webp', 'shirt-009-back.webp'],
+    stock: { M: 1, L: 1, XL: 1, XXL: 1, '3XL': 1 },
+  },  {
+    id: 'shirt-010', sku: 'LZ-010', active: true, featured: false, accent: '#8a1c2b',
+    name: { el: 'Καρό Πουκάμισο Μπλε', en: 'Blue Plaid Shirt' },
+    description: { el: descEl, en: descEn },
+    image: 'shirt-0010.webp', images: ['shirt-010-front.webp', 'shirt-010-back.webp'],
+    stock: { M: 1, L: 1, XL: 1, XXL: 1, '3XL': 1 },
+  },  {
+    id: 'shirt-011', sku: 'LZ-011', active: true, featured: false, accent: '#8a1c2b',
+    name: { el: 'Καρό Πουκάμισο Μαυρο-Μπεζ', en: 'Black-Beige Plaid Shirt' },
+    description: { el: descEl, en: descEn },
+    image: 'shirt-011.webp', images: ['shirt-011-front.webp', 'shirt-011-back.webp'],
+    stock: { M: 1, L: 1, XL: 1, XXL: 1, '3XL': 1 },
   },
 ];
 
