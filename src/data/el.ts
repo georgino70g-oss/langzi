@@ -19,7 +19,7 @@ export const el = {
   'logo.label': 'LANGZI — αρχική σελίδα',
 
   'hero.eyebrow': 'Ανδρικά casual πουκάμισα',
-  'hero.title': 'SUPER OFFER',
+  'hero.title': 'Black November',
   'hero.sub': 'Διαλέξτε τα σχέδια που σας αρέσουν και συνδυάστε τα. Όσο περισσότερα παίρνετε, τόσο καλύτερη η τιμή.',
   'hero.cta': 'Δείτε τα πουκάμισα',
   'hero.cta2': 'Πώς λειτουργούν τα πακέτα',

@@ -21,7 +21,7 @@ export const en: Record<TranslationKey, string> = {
   'logo.label': 'LANGZI — home page',
 
   'hero.eyebrow': "Men's casual shirts",
-  'hero.title': 'SUPER OFFER',
+  'hero.title': 'Black November',
   'hero.sub': 'Pick the designs you like and mix them. The more you take, the better the price.',
   'hero.cta': 'Shop the shirts',
   'hero.cta2': 'How bundles work',
