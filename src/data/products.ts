@@ -76,7 +76,7 @@ export const products: Product[] = [
     id: 'shirt-010', sku: 'LZ-010', active: true, featured: false, accent: '#8a1c2b',
     name: { el: 'Καρό Πουκάμισο Μπλε', en: 'Blue Plaid Shirt' },
     description: { el: descEl, en: descEn },
-    image: 'shirt-0010.webp', images: ['shirt-010-front.webp', 'shirt-010-back.webp'],
+    image: 'shirt-010.webp', images: ['shirt-010-front.webp', 'shirt-010-back.webp'],
     stock: { M: 1, L: 1, XL: 1, XXL: 1, '3XL': 1 },
   },  {
     id: 'shirt-011', sku: 'LZ-011', active: true, featured: false, accent: '#8a1c2b',
